@@ -13,7 +13,6 @@
       height: 100%;
     }
 
-    /* Fixierter Wasserzeichen-Hintergrund */
     body::before {
       content: "";
       position: fixed;
@@ -35,7 +34,8 @@
     }
 
     header img {
-      width: 220px;
+      width: 200px;
+      max-width: 80%;
     }
 
     h1 {
@@ -44,7 +44,6 @@
       color: #000;
     }
 
-    /* Hero-Bild */
     .hero-image {
       width: 100%;
       max-height: 400px;
@@ -124,29 +123,24 @@
 </head>
 <body>
 
-  <!-- Logo -->
   <header>
-    <img src="https://i.postimg.cc/fWnqRh5T/logo-morena.png" alt="Logo La Morena">
+    <img src="https://i.postimg.cc/y6kzRcd6/logo-morena-original.png" alt="Logo La Morena">
     <h1>La Morena Mariscos</h1>
   </header>
 
-  <!-- Hero-Bild -->
   <img class="hero-image" src="https://i.postimg.cc/Twhj8VRG/IMG-3523.jpg" alt="Hauptbild Restaurant">
 
-  <!-- Haupttext -->
   <div class="hero">
     <h2>¡Sabor del mar directo a tu mesa!</h2>
     <p>Frescos, deliciosos y preparados con amor sinaloense.</p>
     <a href="menu.html" class="menu-button">📖 Ver el Menú</a>
   </div>
 
-  <!-- QR-Code -->
   <div class="qr">
     <p>Escanea para ver el menú:</p>
     <img src="https://i.postimg.cc/3Npr3jVJ/qr-menu-demo.png" alt="Código QR del Menú">
   </div>
 
-  <!-- Standort & Info -->
   <div class="section">
     <h2>¿Dónde estamos?</h2>
     <p><strong>Ubicación:</strong> Guamúchil, Sinaloa – ¡Síguenos en redes sociales y ven a visitarnos!</p>
@@ -154,16 +148,13 @@
     <p><strong>Pedidos:</strong> <a href="tel:+526738526328">+52 673 852 6328</a></p>
   </div>
 
-  <!-- Über uns -->
   <div class="section">
     <h2>Sobre Nosotros</h2>
     <p>Somos un negocio familiar apasionado por los mariscos frescos. Con recetas tradicionales y un toque especial, ofrecemos la mejor experiencia de mariscos en Guamúchil.</p>
   </div>
 
-  <!-- WhatsApp-Button -->
   <a href="https://wa.me/526738526328" class="whatsapp-button" target="_blank">💬</a>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 La Morena Mariscos</p>
     <p>Guamúchil, Sinaloa – Todos los derechos reservados</p>
