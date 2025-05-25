@@ -3,116 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Morena Mariscos – Parallax</title>
+  <title>La Morena Mariscos</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --text-color: #1e1e1e;
+      --accent-color: #25d366;
     }
 
     html, body {
+      margin: 0;
+      padding: 0;
       font-family: 'Quicksand', sans-serif;
-      color: #1e1e1e;
-      background: #ffffff;
+      color: var(--text-color);
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      position: relative;
+      min-height: 100vh;
       overflow-x: hidden;
     }
 
-    .parallax {
-      background-image: url('https://i.postimg.cc/T1BJLYYY/IMG-3555.jpg');
-      height: 100vh;
-      background-attachment: fixed;
-      background-position: center;
+    /* Wasserzeichen */
+    body::before {
+      content: "";
+      background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
       background-repeat: no-repeat;
-      background-size: cover;
+      background-position: center center;
+      background-size: contain;
+      opacity: 0.07;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      pointer-events: none;
     }
 
-    .content {
-      padding: 4rem 1.5rem;
-      background-color: rgba(255, 255, 255, 0.9);
-      text-align: center;
-    }
-
-    .content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #003366;
-    }
-
-    .content p {
-      font-size: 1.2rem;
-      max-width: 800px;
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
       margin: auto;
-      line-height: 1.6;
+      padding: 3rem 1.5rem;
     }
 
-    .section {
-      height: 100vh;
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    .menu-section {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      margin-bottom: 3rem;
     }
 
-    .footer {
-      padding: 2rem 1.5rem;
-      text-align: center;
-      font-size: 1rem;
-      background: #f4f4f4;
-      color: #333;
+    .menu-section img {
+      width: 160px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1rem;
     }
 
-    .footer a {
-      color: #003366;
+    .menu-text {
+      flex: 1;
+      padding-left: 1.5rem;
+      font-size: 1.1rem;
+      max-width: 500px;
+    }
+
+    .menu-text a {
+      color: #000;
+      font-weight: bold;
       text-decoration: underline;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 14px 16px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 999;
       font-weight: bold;
     }
 
-    @media (max-width: 768px) {
-      .content h1 {
-        font-size: 2rem;
-      }
+    .whatsapp-btn::before {
+      content: '💬';
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
 
-      .content p {
-        font-size: 1rem;
+    @media (max-width: 768px) {
+      .menu-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .menu-text {
+        padding-left: 0;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- Parallax-Hintergrund -->
-  <div class="parallax"></div>
-
-  <!-- Textabschnitt 1 -->
-  <div class="content">
+  <main>
     <h1>¡Bienvenidos a La Morena Mariscos!</h1>
-    <p>
-      Descubre la frescura y tradición del mar en cada platillo. 
-      Nuestra pasión es ofrecer mariscos de calidad con el sabor auténtico de Sinaloa.
+    <p class="description">
+      En el corazón de Guamúchil, “La Morena Mariscos” es más que un restaurante: es una tradición familiar.
+      Liderados con pasión por Juanny, nos dedicamos a ofrecer los mariscos más frescos, seleccionados cuidadosamente
+      para brindarte auténticos sabores sinaloenses. Cada platillo cuenta una historia del mar, con recetas que despiertan el alma
+      y un servicio que te hará sentir como en casa. ¡Ven a descubrir por qué somos el sabor favorito de muchos!
     </p>
-  </div>
 
-  <!-- Zweiter Parallax -->
-  <div class="parallax"></div>
+    <div class="menu-section">
+      <img src="https://i.postimg.cc/R0Bsqjrc/IMG-3548.png" alt="QR Code para el menú" />
+      <div class="menu-text">
+        Aquí puedes ver el menú completo: ceviche, mariscos frescos, platos calientes, camarones al gusto, cócteles y más delicias sinaloenses.
+        <br><br>
+        <a href="menu.html">→ Ver el menú</a>
+      </div>
+    </div>
 
-  <!-- Textabschnitt 2 -->
-  <div class="content">
-    <h1>¡Ceviches, cocteles y más!</h1>
-    <p>
-      Prueba nuestras especialidades como el ceviche mixto, camarones al gusto y tostadas únicas como “La Morena” o “La Chula”.
-    </p>
-  </div>
+    <div class="contact">
+      <p><strong>Dirección:</strong> Gabriel Leyva #1236,<br>Col. Augustina Ramírez, Guamúchil, Sinaloa</p>
+      <p><strong>Teléfono:</strong> <a href="tel:+526738526328" style="color:#2563eb;">+52 673 852 6328</a></p>
+    </div>
+  </main>
 
-  <!-- Dritter Parallax -->
-  <div class="parallax"></div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <p><strong>Dirección:</strong> Gabriel Leyva #1236, Col. Augustina Ramírez, Guamúchil, Sinaloa</p>
-    <p><strong>Teléfono:</strong> +52 673 852 6328</p>
-    <p><a href="index.html">← Volver a la página principal</a></p>
-  </div>
-
+  <a class="whatsapp-btn" href="https://wa.me/526738526328" target="_blank">
+    WhatsApp
+  </a>
 </body>
 </html>
