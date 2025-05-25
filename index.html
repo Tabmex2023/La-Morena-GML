@@ -27,8 +27,8 @@
       background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
-      opacity: 0.07;
+      background-size: contain;
+      opacity: 0.08;
       position: fixed;
       top: 0;
       left: 0;
@@ -38,15 +38,22 @@
       pointer-events: none;
     }
 
-    .container {
+    .glass-box {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       padding: 2rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .container {
       position: relative;
       z-index: 1;
       max-width: 900px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 2rem 1.5rem;
     }
 
     h1 {
@@ -68,11 +75,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      margin-top: 3rem;
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 2rem;
     }
 
     .menu-section img {
@@ -95,14 +98,9 @@
     }
 
     .contact {
-      margin-top: 3rem;
       text-align: center;
       font-size: 1.1rem;
       line-height: 1.8;
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     /* WhatsApp Button */
@@ -141,15 +139,17 @@
 </head>
 <body>
   <div class="container">
-    <h1>¡Bienvenidos a La Morena Mariscos!</h1>
-    <p class="description">
-      En el corazón de Guamúchil, “La Morena Mariscos” es más que un restaurante: es una tradición familiar. 
-      Liderados con pasión por Juanny, nos dedicamos a ofrecer los mariscos más frescos, seleccionados cuidadosamente 
-      para brindarte auténticos sabores sinaloenses. Cada platillo cuenta una historia del mar, con recetas que despiertan el alma 
-      y un servicio que te hará sentir como en casa. ¡Ven a descubrir por qué somos el sabor favorito de muchos!
-    </p>
+    <div class="glass-box">
+      <h1>¡Bienvenidos a La Morena Mariscos!</h1>
+      <p class="description">
+        En el corazón de Guamúchil, “La Morena Mariscos” es más que un restaurante: es una tradición familiar. 
+        Liderados con pasión por Juanny, nos dedicamos a ofrecer los mariscos más frescos, seleccionados cuidadosamente 
+        para brindarte auténticos sabores sinaloenses. Cada platillo cuenta una historia del mar, con recetas que despiertan el alma 
+        y un servicio que te hará sentir como en casa. ¡Ven a descubrir por qué somos el sabor favorito de muchos!
+      </p>
+    </div>
 
-    <div class="menu-section">
+    <div class="glass-box menu-section">
       <img src="https://i.postimg.cc/R0Bsqjrc/IMG-3548.png" alt="QR Code para el menú" />
       <div class="menu-text">
         Aquí puedes ver el menú completo: ceviche, mariscos frescos, platos calientes, camarones al gusto, cócteles y más delicias sinaloenses.
@@ -158,9 +158,9 @@
       </div>
     </div>
 
-    <div class="contact">
+    <div class="glass-box contact">
       <p><strong>Dirección:</strong> Gabriel Leyva #1236,<br>Col. Augustina Ramírez, Guamúchil, Sinaloa</p>
-      <p><strong>Teléfono:</strong> +52 673 852 6328</p>
+      <p><strong>Teléfono:</strong> <a href="tel:+526738526328" style="color:#2563eb;">+52 673 852 6328</a></p>
     </div>
   </div>
 
