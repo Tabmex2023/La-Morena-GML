@@ -25,17 +25,17 @@
     }
 
     /* Wasserzeichen */
-    body::before {
+  body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
   opacity: 0.25;
   z-index: -1;
   pointer-events: none;
