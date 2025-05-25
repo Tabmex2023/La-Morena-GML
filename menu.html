@@ -2,161 +2,245 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menú – La Morena Mariscos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    html {
-      background-color: #a59f92;
-      background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center center;
+    :root {
+      --text-color: #1e1e1e;
+      --accent-color: #25d366;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
-      color: #000;
-      background-color: transparent;
+      font-family: 'Quicksand', sans-serif;
+      color: var(--text-color);
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      opacity: 0.25;
+      z-index: -1;
+      pointer-events: none;
     }
 
     .container {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .logo {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .logo img {
-      height: 120px;
+      margin: auto;
+      padding: 3rem 1.5rem;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.4em;
-      margin-bottom: 10px;
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
     }
 
-    h2 {
-      font-size: 1.6em;
-      margin-top: 40px;
-      border-bottom: 2px solid #000;
-      padding-bottom: 5px;
+    .menu-category {
+      margin-bottom: 2rem;
     }
 
-    .item {
+    .menu-category h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #0b2e4b;
+      border-bottom: 2px solid #0b2e4b;
+      padding-bottom: 0.3rem;
+    }
+
+    .menu-item {
       display: flex;
       justify-content: space-between;
-      margin: 10px 0;
-      font-size: 1.1em;
-      border-bottom: 1px dotted #444;
-      padding-bottom: 4px;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 1rem;
     }
 
-    .item span:first-child {
+    .menu-item-name {
       font-weight: bold;
+      font-size: 1.1rem;
+      flex: 1;
     }
 
-    .item span:last-child {
-      color: #222;
+    .menu-item-desc {
+      font-size: 0.95rem;
+      flex: 2;
     }
 
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      font-size: 30px;
-      line-height: 60px;
-      text-decoration: none;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 999;
+    .menu-item-price {
+      font-weight: bold;
+      white-space: nowrap;
+      color: #003366;
     }
 
     .back-button {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 3rem;
     }
 
     .back-button a {
       display: inline-block;
-      background-color: #000;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 8px;
+      background-color: #003366;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1em;
-      transition: background-color 0.3s ease;
     }
 
-    .back-button a:hover {
-      background-color: #333;
+    .contact {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
+    <h1>Menú de La Morena Mariscos</h1>
 
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="https://i.postimg.cc/8CVdRR0g/CBF5-C6-CE-C022-4-C5-F-A374-3285-C5-FCB372.png" alt="Logo La Morena" />
+    <div class="menu-category">
+      <h2>Ceviches & Tostadas</h2>
+      <div class="menu-item">
+        <div class="menu-item-name">Ceviche Mixto 1L</div>
+        <div class="menu-item-desc">Camarón cocido, camarón crudo, filete (opcional), tomate, cebolla, pepino y salsa especial de la casa.</div>
+        <div class="menu-item-price">$150</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Ceviche Mixto 1/2L</div>
+        <div class="menu-item-desc">Como arriba, porción mediana.</div>
+        <div class="menu-item-price">$80</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Tostada "La Chula"</div>
+        <div class="menu-item-desc">Tostada con base de filete, camarón cocido y crudo, pulpo, jaiba y coronada de aguacate.</div>
+        <div class="menu-item-price">$110</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Tostada "La Morena"</div>
+        <div class="menu-item-desc">Filete, camarón cocido y crudo, cebolla, pepino, pulpo, callo, medallón de atún y aguacate.</div>
+        <div class="menu-item-price">$145</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Guamuchilito</div>
+        <div class="menu-item-desc">Aguachile personal con pepino, cebolla, camarón en aguachile y pulpo.</div>
+        <div class="menu-item-price">$130</div>
+      </div>
     </div>
 
-    <h1>Menú La Morena Mariscos</h1>
+    <div class="menu-category">
+      <h2>Platos Marisqueros</h2>
+      <div class="menu-item">
+        <div class="menu-item-name">Camarones para Pelar 1kg</div>
+        <div class="menu-item-desc">Botaneros con salsa de la casa.</div>
+        <div class="menu-item-price">$290</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Camarones para Pelar 1/2kg</div>
+        <div class="menu-item-desc">Porción mediana, con salsa especial.</div>
+        <div class="menu-item-price">$140</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">La Coqueta</div>
+        <div class="menu-item-desc">Torre marisquera para 2 personas con filete, pepino, cebolla, camarón cocido, aguachile, pulpo, jaiba y aguacate.</div>
+        <div class="menu-item-price">$290</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">La Conce</div>
+        <div class="menu-item-desc">Tostitos, camarón cocido, crudo, pulpo, pepino, cebolla y aguacate.</div>
+        <div class="menu-item-price">$145</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Tosticeviche</div>
+        <div class="menu-item-desc">Tostitos con ceviche mixto y aguacate.</div>
+        <div class="menu-item-price">$145</div>
+      </div>
+    </div>
 
-    <h2>Ceviches</h2>
-    <div class="item"><span>Ceviche Mixto 1L</span><span>$150</span></div>
-    <div class="item"><span>Ceviche Mixto 1/2L</span><span>$80</span></div>
-    <div class="item"><span>Ceviche de Camarón 1L</span><span>$150</span></div>
-    <div class="item"><span>Ceviche de Camarón 1/2L</span><span>$80</span></div>
-    <div class="item"><span>Ceviche de Pescado 1L</span><span>$110</span></div>
-    <div class="item"><span>Ceviche de Pescado 1/2L</span><span>$60</span></div>
+    <div class="menu-category">
+      <h2>Especialidades de Pescado</h2>
+      <div class="menu-item">
+        <div class="menu-item-name">Ceviche de Pescado 1L</div>
+        <div class="menu-item-desc">Filete de mojarra, pepino, tomate, cebolla y salsa especial.</div>
+        <div class="menu-item-price">$110</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Ceviche de Pescado 1/2L</div>
+        <div class="menu-item-desc">Porción mediana.</div>
+        <div class="menu-item-price">$60</div>
+      </div>
+    </div>
 
-    <h2>Tostadas</h2>
-    <div class="item"><span>Tostada "La Chula"</span><span>$110</span></div>
-    <div class="item"><span>Tostada "La Morena"</span><span>$145</span></div>
-    <div class="item"><span>Tostadita Kids</span><span>$50</span></div>
+    <div class="menu-category">
+      <h2>Ceviche de Camarón</h2>
+      <div class="menu-item">
+        <div class="menu-item-name">1L</div>
+        <div class="menu-item-desc">Camarón crudo o cocido (a elegir), pepino, tomate, cebolla, salsa especial.</div>
+        <div class="menu-item-price">$150</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">1/2L</div>
+        <div class="menu-item-desc">Versión mediana del anterior.</div>
+        <div class="menu-item-price">$80</div>
+      </div>
+    </div>
 
-    <h2>Especiales</h2>
-    <div class="item"><span>Guamuchilito</span><span>$130</span></div>
-    <div class="item"><span>La Concha</span><span>$145</span></div>
-    <div class="item"><span>Tosticeviche</span><span>$145</span></div>
-    <div class="item"><span>La Coqueta (2 personas)</span><span>$290</span></div>
+    <div class="menu-category">
+      <h2>Kids & Bebidas</h2>
+      <div class="menu-item">
+        <div class="menu-item-name">Tostadita Kids</div>
+        <div class="menu-item-desc">Tostada con pepino, camarón cocido y aguacate.</div>
+        <div class="menu-item-price">$50</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Agua Fresca 1L</div>
+        <div class="menu-item-desc">(Limón, jamaica, piña o fresa)</div>
+        <div class="menu-item-price">$30</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Agua Fresca 1.5L</div>
+        <div class="menu-item-desc">(Limón, jamaica, piña o fresa)</div>
+        <div class="menu-item-price">$20</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Coca-Cola (600ml)</div>
+        <div class="menu-item-desc">Refresco clásico</div>
+        <div class="menu-item-price">$25</div>
+      </div>
+    </div>
 
-    <h2>Camarones para Pelar</h2>
-    <div class="item"><span>1 kg</span><span>$290</span></div>
-    <div class="item"><span>1/2 kg</span><span>$140</span></div>
-
-    <h2>Bebidas</h2>
-    <div class="item"><span>Agua Fresca 1L (Limón, Jamaica, Piña, Fresa)</span><span>$30</span></div>
-    <div class="item"><span>Agua Fresca 1.5L (Limón, Jamaica, Piña, Fresa)</span><span>$20</span></div>
-    <div class="item"><span>Coca-Cola 600ml</span><span>$25</span></div>
-
-    <h2>Pedidos</h2>
-    <div style="font-size: 1.3em; font-weight: bold; margin-top: 10px;">📞 673 852 6328</div>
-
-    <!-- ZURÜCK-BUTTON -->
     <div class="back-button">
       <a href="index.html">← Volver a la página principal</a>
     </div>
 
+    <div class="contact">
+      <p><strong>Dirección:</strong> Gabriel Leyva #1236<br>Col. Augustina Ramírez, Guamúchil, Sinaloa</p>
+      <p><strong>Teléfono:</strong> +52 673 852 6328</p>
+    </div>
   </div>
-
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/526738526328" class="whatsapp-button" target="_blank">💬</a>
-
 </body>
 </html>
