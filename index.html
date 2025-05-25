@@ -1,98 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Morena Mariscos</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
       font-family: 'Arial', sans-serif;
-      color: #000;
-      background-color: #f1e7d5;
+      background-color: #a59f92;
       background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
-      background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
       background-position: center;
+      color: #000;
     }
 
     header {
-      text-align: center;
-      padding: 40px 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background-color: rgba(255, 255, 255, 0.85);
+      flex-wrap: wrap;
     }
 
-    header h1 {
-      font-size: 2.8em;
-      margin: 0;
+    header img {
+      height: 70px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
       font-weight: bold;
-    }
-
-    .hero-image {
-      width: 100%;
-      max-height: 480px;
-      object-fit: cover;
-      display: block;
+      font-size: 1em;
     }
 
     .hero {
       text-align: center;
-      padding: 50px 20px 30px;
+      padding: 60px 20px 40px;
     }
 
-    .hero h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 2.4em;
+      margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 1.2em;
-      margin-bottom: 25px;
-    }
-
-    .menu-button {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: #ffc107;
-      color: #000;
-      font-size: 1.2em;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 900px;
+      max-width: 700px;
       margin: auto;
     }
 
+    .section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
     .section h2 {
-      font-size: 1.6em;
-      margin-bottom: 10px;
+      font-size: 1.8em;
+      margin-bottom: 15px;
     }
 
     .section p {
       font-size: 1.1em;
-      margin-bottom: 10px;
+      line-height: 1.6;
     }
 
-    .qr {
+    .contact {
       text-align: center;
-      margin: 40px 0;
-    }
-
-    .qr img {
-      width: 180px;
-    }
-
-    .footer {
+      padding: 40px 20px;
       background-color: rgba(255, 255, 255, 0.85);
-      color: #000;
-      text-align: center;
-      padding: 25px 10px;
-      font-size: 1em;
+    }
+
+    .contact p {
+      font-size: 1.2em;
+      margin: 5px 0;
     }
 
     .whatsapp-button {
@@ -112,30 +103,60 @@
       z-index: 999;
     }
 
-    a {
-      color: #000;
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav a {
+        font-size: 1.1em;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>La Morena Mariscos</h1>
+    <img src="https://i.postimg.cc/8CVdRR0g/CBF5-C6-CE-C022-4-C5-F-A374-3285-C5-FCB372.png" alt="Logo La Morena" />
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="menu.html" target="_blank">Menú</a>
+      <a href="#sobre">Sobre Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <!-- Kleineres Hero-Bild -->
-  <img class="hero-image" src="hero-small.jpg" alt="Foto La Morena Mariscos">
-
-  <div class="hero">
-    <h2>¡Sabor del mar directo a tu mesa!</h2>
-    <p>Frescos, deliciosos y preparados con amor sinaloense.</p>
-    <a href="menu.html" class="menu-button">📖 Ver el Menú</a>
+  <div class="hero" id="inicio">
+    <h1>¡Bienvenidos a La Morena Mariscos!</h1>
+    <p>El auténtico sabor del mar en Guamúchil. Mariscos frescos, recetas familiares y el toque sinaloense que nos distingue.</p>
   </div>
 
-  <div class="qr">
-    <p>Escanea para ver el menú:</p>
-    <img src="https://i.postimg.cc/3Npr3jVJ/qr-menu-demo.png" alt="Código QR del Menú">
+  <div class="section" id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>La Morena Mariscos es un negocio familiar fundado y dirigido por <strong>Juanny</strong>, con pasión por la cocina tradicional y el servicio cercano. Con años de experiencia y dedicación, servimos los mejores mariscos de la región, preparados al momento, con ingredientes frescos y mucho amor.</p>
+    <p>Desde ceviches hasta cócteles, cada platillo representa nuestra esencia: calidad, frescura y sabor auténtico de Sinaloa.</p>
   </div>
 
-  <div class="section">
-    <h2 |oai:code-citation|
+  <div class="section" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes antojo de mariscos? ¡Visítanos o haz tu pedido!</p>
+    <p><strong>Ubicación:</strong> Guamúchil, Sinaloa</p>
+    <p><strong>Teléfono:</strong> +52 673 852 6328</p>
+  </div>
+
+  <a href="https://wa.me/526738526328" class="whatsapp-button" target="_blank">💬</a>
+
+</body>
+</html>
