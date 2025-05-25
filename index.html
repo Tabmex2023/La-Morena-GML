@@ -22,12 +22,12 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 30px 20px 20px;
-      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px 20px;
+      background-color: rgba(165, 159, 146, 0.95);
     }
 
     .top-banner img {
-      height: 120px;
+      height: 110px;
       margin-right: 20px;
     }
 
@@ -49,24 +49,33 @@
     }
 
     .menu-section {
-      text-align: center;
-      margin: 40px auto;
-      max-width: 800px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 900px;
     }
 
     .menu-section img {
-      width: 100%;
-      max-width: 600px;
+      width: 140px;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-description {
+      max-width: 600px;
+      font-size: 1.1em;
     }
 
     .address-section {
       background-color: rgba(255, 255, 255, 0.85);
       text-align: center;
       padding: 30px 20px;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
 
     .whatsapp-button {
@@ -93,11 +102,20 @@
       }
 
       .top-banner img {
-        margin: 0 0 15px 0;
+        margin-bottom: 15px;
       }
 
       .top-banner h1 {
         font-size: 2em;
+      }
+
+      .menu-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .menu-description {
+        font-size: 1em;
       }
     }
   </style>
@@ -115,21 +133,24 @@
     <p>Somos un negocio familiar liderado por <strong>Juanny</strong>, apasionados por ofrecer los mejores mariscos frescos de Guamúchil. Con recetas tradicionales y amor por lo que hacemos, cada platillo es una muestra del verdadero sabor sinaloense. Ven a visitarnos y disfruta de una experiencia única y auténtica del mar.</p>
   </div>
 
-  <!-- MENÚ ANKLICKBAR -->
+  <!-- MENÚ SECTION -->
   <div class="menu-section">
     <a href="menu.html" target="_blank">
-      <img src="https://i.postimg.cc/3Npr3jVJ/qr-menu-demo.png" alt="Ver el menú">
+      <img src="https://i.postimg.cc/3Npr3jVJ/qr-menu-demo.png" alt="QR Menu">
     </a>
-    <p style="margin-top: 10px;">Haz clic para ver nuestro menú</p>
+    <div class="menu-description">
+      <p>Aquí puedes ver el menú completo: ceviche, mariscos frescos, platos calientes, camarones al gusto, cócteles y más delicias sinaloenses.</p>
+    </div>
   </div>
 
   <!-- ADRESSE -->
   <div class="address-section">
-    <p><strong>Guamúchil, Sinaloa</strong></p>
+    <p><strong>Dirección:</strong> Gabriel Leyva #1236, Col. Augustina Ramírez</p>
+    <p><strong>Ciudad:</strong> Guamúchil, Sinaloa</p>
     <p><strong>Teléfono:</strong> +52 673 852 6328</p>
   </div>
 
-  <!-- WHATSAPP BUTTON -->
+  <!-- WHATSAPP -->
   <a href="https://wa.me/526738526328" class="whatsapp-button" target="_blank">💬</a>
 
 </body>
