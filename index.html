@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Morena Mariscos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     html {
       background-color: #a59f92;
@@ -17,7 +18,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       color: #000;
       background-color: transparent;
     }
@@ -29,22 +30,14 @@
     }
 
     .top-banner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 30px 20px;
-    }
-
-    .top-banner img {
-      height: 140px;
-      margin-right: 20px;
+      text-align: center;
+      padding: 40px 20px 20px;
     }
 
     .top-banner h1 {
-      font-size: 2.4em;
+      font-size: 2.6em;
+      font-weight: 600;
       margin: 0;
-      font-weight: bold;
     }
 
     .hero p {
@@ -52,6 +45,7 @@
       text-align: center;
       max-width: 700px;
       margin: 0 auto 30px;
+      font-weight: 400;
     }
 
     .menu-section {
@@ -103,19 +97,6 @@
     }
 
     @media (max-width: 768px) {
-      .top-banner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .top-banner img {
-        margin-bottom: 15px;
-      }
-
-      .top-banner h1 {
-        font-size: 2em;
-      }
-
       .menu-section {
         flex-direction: column;
         text-align: center;
@@ -124,14 +105,17 @@
       .menu-description {
         font-size: 1em;
       }
+
+      .top-banner h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- KOPF -->
+  <!-- TOP (ohne Logo) -->
   <div class="top-banner">
-    <img src="https://i.postimg.cc/8CVdRR0g/CBF5-C6-CE-C022-4-C5-F-A374-3285-C5-FCB372.png" alt="Logo La Morena" />
     <h1>¡Bienvenidos a La Morena Mariscos!</h1>
   </div>
 
@@ -140,7 +124,7 @@
     <p>Somos un negocio familiar liderado por <strong>Juanny</strong>, apasionados por ofrecer los mejores mariscos frescos de Guamúchil. Con recetas tradicionales y amor por lo que hacemos, cada platillo es una muestra del verdadero sabor sinaloense. Ven a visitarnos y disfruta de una experiencia única y auténtica del mar.</p>
     
     <div class="menu-section">
-      <a href="menu.html" target="_blank">
+      <a href="menu.html">
         <img src="https://i.postimg.cc/R0Bsqjrc/IMG-3548.png" alt="QR Menu actualizado">
       </a>
       <div class="menu-description">
