@@ -23,19 +23,20 @@
 
     /* Hintergrund-Wasserzeichen */
     body::before {
-      content: "";
-      background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      opacity: 0.06;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 0;
-    }
+  content: "";
+  background-image: url('https://i.postimg.cc/vHWpN8RZ/786753-E3-B0-B9-49-F9-8-B48-A3-B06256-ED8-D.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  }
 
     .container {
       padding: 2rem 1.5rem;
