@@ -17,40 +17,29 @@
       color: #000;
     }
 
-    header {
+    .top-banner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 15px 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 30px 20px 20px;
       background-color: rgba(255, 255, 255, 0.85);
-      flex-wrap: wrap;
     }
 
-    header img {
-      height: 70px;
+    .top-banner img {
+      height: 120px;
+      margin-right: 20px;
     }
 
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #000;
+    .top-banner h1 {
+      font-size: 2.4em;
+      margin: 0;
       font-weight: bold;
-      font-size: 1em;
     }
 
     .hero {
       text-align: center;
-      padding: 60px 20px 40px;
-    }
-
-    .hero h1 {
-      font-size: 2.4em;
-      margin-bottom: 15px;
+      padding: 50px 20px 30px;
     }
 
     .hero p {
@@ -59,31 +48,25 @@
       margin: auto;
     }
 
-    .section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .section h2 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
-    }
-
-    .section p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
-    .contact {
+    .menu-section {
       text-align: center;
-      padding: 40px 20px;
-      background-color: rgba(255, 255, 255, 0.85);
+      margin: 40px auto;
+      max-width: 800px;
     }
 
-    .contact p {
+    .menu-section img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .address-section {
+      background-color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      padding: 30px 20px;
       font-size: 1.2em;
-      margin: 5px 0;
     }
 
     .whatsapp-button {
@@ -104,58 +87,49 @@
     }
 
     @media (max-width: 768px) {
-      header {
+      .top-banner {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
       }
 
-      nav {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        margin-top: 10px;
+      .top-banner img {
+        margin: 0 0 15px 0;
       }
 
-      nav a {
-        font-size: 1.1em;
-      }
-
-      header img {
-        margin-bottom: 10px;
+      .top-banner h1 {
+        font-size: 2em;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <!-- LOGO + BIENVENIDA -->
+  <div class="top-banner">
     <img src="https://i.postimg.cc/8CVdRR0g/CBF5-C6-CE-C022-4-C5-F-A374-3285-C5-FCB372.png" alt="Logo La Morena" />
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="menu.html" target="_blank">Menú</a>
-      <a href="#sobre">Sobre Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <div class="hero" id="inicio">
     <h1>¡Bienvenidos a La Morena Mariscos!</h1>
-    <p>El auténtico sabor del mar en Guamúchil. Mariscos frescos, recetas familiares y el toque sinaloense que nos distingue.</p>
   </div>
 
-  <div class="section" id="sobre">
-    <h2>Sobre Nosotros</h2>
-    <p>La Morena Mariscos es un negocio familiar fundado y dirigido por <strong>Juanny</strong>, con pasión por la cocina tradicional y el servicio cercano. Con años de experiencia y dedicación, servimos los mejores mariscos de la región, preparados al momento, con ingredientes frescos y mucho amor.</p>
-    <p>Desde ceviches hasta cócteles, cada platillo representa nuestra esencia: calidad, frescura y sabor auténtico de Sinaloa.</p>
+  <!-- HERO TEXT -->
+  <div class="hero">
+    <p>Somos un negocio familiar liderado por <strong>Juanny</strong>, apasionados por ofrecer los mejores mariscos frescos de Guamúchil. Con recetas tradicionales y amor por lo que hacemos, cada platillo es una muestra del verdadero sabor sinaloense. Ven a visitarnos y disfruta de una experiencia única y auténtica del mar.</p>
   </div>
 
-  <div class="section" id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Tienes antojo de mariscos? ¡Visítanos o haz tu pedido!</p>
-    <p><strong>Ubicación:</strong> Guamúchil, Sinaloa</p>
+  <!-- MENÚ ANKLICKBAR -->
+  <div class="menu-section">
+    <a href="menu.html" target="_blank">
+      <img src="https://i.postimg.cc/3Npr3jVJ/qr-menu-demo.png" alt="Ver el menú">
+    </a>
+    <p style="margin-top: 10px;">Haz clic para ver nuestro menú</p>
+  </div>
+
+  <!-- ADRESSE -->
+  <div class="address-section">
+    <p><strong>Guamúchil, Sinaloa</strong></p>
     <p><strong>Teléfono:</strong> +52 673 852 6328</p>
   </div>
 
+  <!-- WHATSAPP BUTTON -->
   <a href="https://wa.me/526738526328" class="whatsapp-button" target="_blank">💬</a>
 
 </body>
