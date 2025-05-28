@@ -122,6 +122,28 @@
       animation-name: fade;
       animation-duration: 1.5s;
     }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 0 3px 3px 0;
+      background-color: rgba(0,0,0,0.4);
+      user-select: none;
+      z-index: 1000;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -190,6 +212,9 @@
       <div class="slide fade"><img src="https://i.postimg.cc/0jk6H3zT/b078c4b7-93b5-44ea-95db-7b4530d4617d.jpg"></div>
       <div class="slide fade"><img src="https://i.postimg.cc/ZYHvyTg4/1f7760f5-49b4-42e6-acbd-6a93cce9d754.jpg"></div>
       <div class="slide fade"><img src="https://i.postimg.cc/7YQCmKwR/0f40b67f-0d21-45ef-a2be-8d40ae063346.jpg"></div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
     <div class="contact">
@@ -204,18 +229,38 @@
 
   <script>
     let slideIndex = 0;
-    showSlides();
-    function showSlides() {
-      let i;
+    let autoSlideInterval;
+
+    function showSlides(n) {
       let slides = document.getElementsByClassName("slide");
-      for (i = 0; i < slides.length; i++) {
+      if (n >= slides.length) { slideIndex = 0; }
+      if (n < 0) { slideIndex = slides.length - 1; }
+
+      for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2500);
+
+      slides[slideIndex].style.display = "block";
     }
+
+    function plusSlides(n) {
+      clearInterval(autoSlideInterval);
+      slideIndex += n;
+      showSlides(slideIndex);
+      startAutoSlide();
+    }
+
+    function autoSlides() {
+      slideIndex++;
+      showSlides(slideIndex);
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(autoSlides, 2000);
+    }
+
+    showSlides(slideIndex);
+    startAutoSlide();
   </script>
 
 </body>
