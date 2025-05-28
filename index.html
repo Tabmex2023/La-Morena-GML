@@ -7,35 +7,13 @@
   <meta name="description" content="La Morena Mariscos en Guamúchil – disfruta de ceviche fresco, aguachiles, camarones y cócteles. Sabor auténtico de Sinaloa. Visítanos o pide por WhatsApp.">
   <meta name="keywords" content="mariscos Guamúchil, ceviche Guamúchil, restaurante de mariscos, aguachile Sinaloa, comida de mar, cocteles de camarón, sinaloense, La Morena Mariscos">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "La Morena Mariscos",
-    "image": "https://i.postimg.cc/R0Bsqjrc/IMG-3548.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Gabriel Leyva #1236",
-      "addressLocality": "Guamúchil",
-      "addressRegion": "Sinaloa",
-      "addressCountry": "MX"
-    },
-    "telephone": "+52 673 852 6328",
-    "servesCuisine": "Mariscos, Ceviche, Sinaloense",
-    "url": "https://tabmex2023.github.io/La-Morena-GML"
-  }
-  </script>
 
   <style>
     :root {
       --text-color: #1e1e1e;
       --accent-color: #25d366;
     }
-
     html, body {
       margin: 0;
       padding: 0;
@@ -48,8 +26,6 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-
-    /* Wasserzeichen */
     body::before {
       content: "";
       position: fixed;
@@ -65,20 +41,16 @@
       z-index: -1;
       pointer-events: none;
     }
-
-    /* 🔼 Banner oben */
     .banner-container {
       width: 100%;
       max-width: 100%;
       overflow: hidden;
     }
-
     .responsive-banner {
       width: 100%;
       height: auto;
       display: block;
     }
-
     main {
       position: relative;
       z-index: 1;
@@ -86,13 +58,11 @@
       margin: auto;
       padding: 3rem 1.5rem;
     }
-
     h1 {
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
     }
-
     .description {
       font-size: 1.2rem;
       line-height: 1.6;
@@ -100,7 +70,6 @@
       max-width: 800px;
       margin: 0 auto 3rem;
     }
-
     .menu-section {
       display: flex;
       flex-wrap: wrap;
@@ -108,34 +77,51 @@
       justify-content: center;
       margin-bottom: 3rem;
     }
-
     .menu-section img {
       width: 160px;
       height: auto;
       border-radius: 10px;
       margin-bottom: 1rem;
     }
-
     .menu-text {
       flex: 1;
       padding-left: 1.5rem;
       font-size: 1.1rem;
       max-width: 500px;
     }
-
     .menu-text a {
       color: #000;
       font-weight: bold;
       text-decoration: underline;
     }
-
     .contact {
       text-align: center;
       font-size: 1.1rem;
       line-height: 1.8;
+      margin-bottom: 3rem;
     }
-
-    /* WhatsApp Button */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+    .slide {
+      display: none;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -151,13 +137,11 @@
       z-index: 999;
       font-weight: bold;
     }
-
     .whatsapp-btn::before {
       content: '💬';
       margin-right: 8px;
       font-size: 1.2rem;
     }
-
     @media (max-width: 768px) {
       .menu-section {
         flex-direction: column;
@@ -171,7 +155,6 @@
 </head>
 <body>
 
-  <!-- 🔼 Banner mit Öffnungszeiten und Telefonnummer -->
   <div class="banner-container">
     <img src="https://i.postimg.cc/Dyr30DHk/1309597-C-5189-4-CEB-9974-1-F21-AD9-A6654.png" 
          alt="La Morena Banner" 
@@ -183,14 +166,13 @@
     <p class="description">
       En el corazón de Guamúchil, “La Morena Mariscos” es más que un restaurante: es una tradición familiar.
       Liderados con pasión por Juanny, nos dedicamos a ofrecer los mariscos más frescos, seleccionados cuidadosamente
-      para brindarte auténticos sabores sinaloenses. Cada platillo cuenta una historia del mar, con recetas que despiertan el alma
-      y un servicio que te hará sentir como en casa. ¡Ven a descubrir por qué somos el sabor favorito de muchos!
+      para brindarte auténticos sabores sinaloenses.
     </p>
 
     <div class="menu-section">
       <a href="menu.html">
-  <img src="https://i.postimg.cc/R0Bsqjrc/IMG-3548.png" alt="QR del menú de mariscos y ceviche en La Morena Mariscos Guamúchil" />
-</a>
+        <img src="https://i.postimg.cc/R0Bsqjrc/IMG-3548.png" alt="QR del menú de mariscos y ceviche en La Morena Mariscos Guamúchil" />
+      </a>
       <div class="menu-text">
         Aquí puedes ver el menú completo: ceviche, mariscos frescos, platos calientes, camarones al gusto, cócteles y más delicias sinaloenses.
         <br><br>
@@ -198,14 +180,43 @@
       </div>
     </div>
 
+    <div class="slideshow-container">
+      <div class="slide fade"><img src="https://i.postimg.cc/sfY9HdNN/615c9871-33c0-4322-8bf4-542056ef726b.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/X7nKT1M7/f3fa7c0a-e1b2-4ac1-88f2-faa9eaf6bb74.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/LXdLvNBS/0662696d-68e8-4e64-8d9d-6871a6e6aed3.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/wxQLc5tK/a6d23672-f104-404b-991f-c9940fc64fec.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/BnXF0dms/8bfc2d8d-e70c-4d09-b84d-858b0efe4180.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/KYTgKtXH/57b7a6c8-787d-43e1-a4dd-f0c5512f1eed.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/0jk6H3zT/b078c4b7-93b5-44ea-95db-7b4530d4617d.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/ZYHvyTg4/1f7760f5-49b4-42e6-acbd-6a93cce9d754.jpg"></div>
+      <div class="slide fade"><img src="https://i.postimg.cc/7YQCmKwR/0f40b67f-0d21-45ef-a2be-8d40ae063346.jpg"></div>
+    </div>
+
     <div class="contact">
       <p><strong>Dirección:</strong> Gabriel Leyva #1236,<br>Col. Augustina Ramírez, Guamúchil, Sinaloa</p>
+      <iframe src="https://www.google.com/maps?q=Gabriel+Leyva+1236,+Guamúchil,+Sinaloa,+Mexico&output=embed"
+        width="100%" height="300" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
       <p><strong>Teléfono:</strong> <a href="tel:+526738526328" style="color:#2563eb;">+52 673 852 6328</a></p>
     </div>
   </main>
 
-  <a class="whatsapp-btn" href="https://wa.me/526738526328" target="_blank">
-    WhatsApp
-  </a>
+  <a class="whatsapp-btn" href="https://wa.me/526738526328" target="_blank">WhatsApp</a>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2500);
+    }
+  </script>
+
 </body>
 </html>
