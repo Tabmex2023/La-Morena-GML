@@ -14,6 +14,7 @@
       --text-color: #1e1e1e;
       --accent-color: #25d366;
     }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -26,6 +27,7 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -41,16 +43,37 @@
       z-index: -1;
       pointer-events: none;
     }
+
+    .fixed-logo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    .fixed-logo img {
+      max-width: 180px;
+      height: auto;
+    }
+
     .banner-container {
       width: 100%;
       max-width: 100%;
       overflow: hidden;
+      margin-top: 90px; /* Abstand unter dem fixierten Logo */
     }
+
     .responsive-banner {
       width: 100%;
       height: auto;
       display: block;
     }
+
     main {
       position: relative;
       z-index: 1;
@@ -58,11 +81,13 @@
       margin: auto;
       padding: 3rem 1.5rem;
     }
+
     h1 {
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
     }
+
     .description {
       font-size: 1.2rem;
       line-height: 1.6;
@@ -70,6 +95,7 @@
       max-width: 800px;
       margin: 0 auto 3rem;
     }
+
     .menu-section {
       display: flex;
       flex-wrap: wrap;
@@ -77,51 +103,61 @@
       justify-content: center;
       margin-bottom: 3rem;
     }
+
     .menu-section img {
       width: 160px;
       height: auto;
       border-radius: 10px;
       margin-bottom: 1rem;
     }
+
     .menu-text {
       flex: 1;
       padding-left: 1.5rem;
       font-size: 1.1rem;
       max-width: 500px;
     }
+
     .menu-text a {
       color: #000;
       font-weight: bold;
       text-decoration: underline;
     }
+
     .contact {
       text-align: center;
       font-size: 1.1rem;
       line-height: 1.8;
       margin-bottom: 3rem;
     }
+
     .slideshow-container {
       max-width: 100%;
       position: relative;
       margin: auto;
     }
+
     .slide {
       display: none;
     }
+
     .slide img {
       width: 100%;
       height: auto;
       display: block;
       border-radius: 10px;
     }
+
     @keyframes fade {
       from {opacity: .4}
       to {opacity: 1}
     }
+
     .fade {
       animation-name: fade;
       animation-duration: 1.5s;
     }
+
     .prev, .next {
       cursor: pointer;
       position: absolute;
@@ -137,13 +173,16 @@
       user-select: none;
       z-index: 1000;
     }
+
     .next {
       right: 0;
       border-radius: 3px 0 0 3px;
     }
+
     .prev:hover, .next:hover {
       background-color: rgba(0,0,0,0.8);
     }
+
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -159,16 +198,19 @@
       z-index: 999;
       font-weight: bold;
     }
+
     .whatsapp-btn::before {
       content: '💬';
       margin-right: 8px;
       font-size: 1.2rem;
     }
+
     @media (max-width: 768px) {
       .menu-section {
         flex-direction: column;
         text-align: center;
       }
+
       .menu-text {
         padding-left: 0;
       }
@@ -177,6 +219,12 @@
 </head>
 <body>
 
+  <!-- Logo fixiert ganz oben -->
+  <div class="fixed-logo">
+    <img src="https://i.postimg.cc/85VB7vMw/A48-AFE39-32-F8-4-A0-F-844-C-C18074129496.png" alt="La Morena Logo">
+  </div>
+
+  <!-- Banner -->
   <div class="banner-container">
     <img src="https://i.postimg.cc/Dyr30DHk/1309597-C-5189-4-CEB-9974-1-F21-AD9-A6654.png" 
          alt="La Morena Banner" 
